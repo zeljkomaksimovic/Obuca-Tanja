@@ -1,0 +1,181 @@
+﻿body {
+    font: 15px/1.5 Helvetica, Arial, Sans-serif;
+    /*padding: 150px 0 0 0;*/
+    margin: 0;
+}
+
+    body a {
+        transition: 0.3s all;
+        -webkit-transition: 0.3s all;
+        -moz-transition: 0.3s all;
+        -o-transition: 0.3s all;
+    }
+/*Global*/
+.container {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 60%;
+}
+
+#parallax {
+    background: url("../images/shoebg2.png") no-repeat fixed 100%;
+    background-position:78% 10%;
+    
+    /*background-repeat: no-repeat;
+    background-attachment: fixed;*/
+}
+    #parallax #parallax-inner {
+       
+      
+    }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button {
+    background-color: #ddb48d;
+    height: 45px;
+    width: 25%;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+}
+
+    .button:hover {
+        background-color: #ddb48d;
+        opacity: 0.8;
+    }
+
+/*Header*/
+header {
+    background-color: #fff;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .07);
+    color: #253247;
+    min-height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+    header a {
+        color: #253247;
+        text-decoration: none;
+    }
+
+    header li {
+        float: left;
+        display: inline;
+        padding: 0 20px 0 20px;
+    }
+
+    header .active {
+        color: aqua;
+    }
+
+    header #logo {
+        float: left;
+    }
+
+        header #logo h1 {
+            margin: 0;
+        }
+
+    header nav {
+        float: right;
+        margin-top: 29px;
+    }
+
+    header a:hover {
+        color: #ddb48d;
+    }
+/*Index Global*/
+.sectiontop {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #253247;
+}
+
+/*Index Showcase Section*/
+#showcase {
+    padding-top:150px;
+    margin: 0px 0 40px 0;
+    text-align: center;
+}
+
+/*Index Brands Section*/
+#brands {
+    background-color: #253247;
+    min-height: 95px;
+    /*margin-top: 40px;*/
+    text-align: center;
+}
+
+    #brands h2 {
+        display: inline-block;
+        color: #fff;
+        padding: 10px 20px 0 20px;
+    }
+
+/*Index Boxes Section*/
+#boxes {
+    text-align: center;
+    background-color: #fff;
+}
+
+    #boxes #secondbox {
+        margin: 0 5% 0 5%;
+    }
+
+    #boxes .box {
+        width: 25%;
+        text-align: center;
+        display: inline-block;
+        padding: 10px;
+        border: 1px solid;
+        border-color: #ddb48d;
+    }
+
+@media(max-width:1240px) {
+    #boxes .box {
+        width: 20%;
+    }
+}
+
+@media(max-width:997px) {
+    #boxes .box {
+        float: none;
+        width: auto;
+    }
+
+    #boxes #secondbox {
+        margin: 3% 0 3% 0;
+    }
+}
+
+/*Index Shop Section*/
+#shop {
+    text-align: center;
+}

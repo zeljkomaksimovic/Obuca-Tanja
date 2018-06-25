@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obuća Tanja - @ViewBag.Title</title>
+    @Styles.Render("~/Style/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <h1>Obuca Tanja</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active">@Html.ActionLink("Početna", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Prodavnica", "Shop", "Home")</li>
+                    <li>@Html.ActionLink("Muškarci", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Žene", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Korpa", "CheckOut", "Home")</li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div class="container">
+            <p>&copy;Zeljko Maksimovic 2018</p>
+        </div>       
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
