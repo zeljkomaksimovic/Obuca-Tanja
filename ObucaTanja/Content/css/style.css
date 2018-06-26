@@ -12,7 +12,7 @@
     }
 /*Global*/
 .container {
-    width: 60%;
+    width: 1045px;
     margin: auto;
     overflow: hidden;
 }
@@ -22,30 +22,10 @@ ul {
     padding: 0;
 }
 
-.column {
+.column-2 {
     float: left;
     width: 50%;
 }
-
-.left {
-    width: 40%;
-}
-
-.right {
-    width: 60%;
-}
-
-#parallax {
-    background: url("../images/shoebg2.png") no-repeat fixed 100%;
-    background-position:78% 10%;
-    
-    /*background-repeat: no-repeat;
-    background-attachment: fixed;*/
-}
-    #parallax #parallax-inner {
-       
-      
-    }
 
 .row:after {
     content: "";
@@ -60,8 +40,8 @@ ul {
     font-size: 15px;
     font-weight: bold;
     border: 0;
-    border-radius: 3px;
-    color: #fff;
+    border-radius: 5px;
+    color: #ffffff;
 }
 
     .button:hover {
@@ -71,7 +51,7 @@ ul {
 
 /*Header*/
 header {
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .07);
     color: #253247;
     min-height: 80px;
@@ -80,7 +60,7 @@ header {
     width: 100%;
 }
 
-    header a {
+/*header a {
         color: #253247;
         text-decoration: none;
     }
@@ -89,28 +69,56 @@ header {
         float: left;
         display: inline;
         padding: 0 20px 0 20px;
-    }
+    }*/
+/*TEST*/
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
 
-    header .active {
-        color: aqua;
+    ul li a {
+        text-decoration: none;
+        color: #253247;
     }
+/*TEST*/
+header i {
+    float: right;
+}
 
-    header #logo {
-        float: left;
-    }
+header .active {
+    color: aqua;
+}
 
-        header #logo h1 {
-            margin: 0;
-        }
+header #logo {
+    float: left;
+}
 
-    header nav {
-        float: right;
-        margin-top: 29px;
-    }
 
-    header a:hover {
-        color: #ddb48d;
-    }
+header nav {
+    float: right;
+    margin-top: 29px;
+}
+
+header a:hover {
+    color: #ddb48d;
+}
+
+.showing {
+    display: block;
+}
+
+.toggle {
+    display: none;  
+}
+
+.menu i .fa-bars:hover {
+    color: #ddb48d;
+    transition: 0.2s all;
+    -webkit-transition: 0.2s all;
+    -moz-transition: 0.2s all;
+    -o-transition: 0.2s all;
+}
 /*Index Global*/
 .sectiontop {
     margin-top: 40px;
@@ -120,9 +128,24 @@ header {
 
 /*Index Showcase Section*/
 #showcase {
-    padding-top:150px;
+    padding-top: 150px;
     margin: 0px 0 40px 0;
     text-align: center;
+}
+
+#parallax {
+    background: url("../images/shoebg2.png") no-repeat fixed;
+    background-position: 78% 10%;
+    /*background-repeat: no-repeat;
+    background-attachment: fixed;*/
+}
+
+.left-col {
+    width: 40%;
+}
+
+.right-col {
+    width: 60%;
 }
 
 /*Index Brands Section*/
@@ -135,14 +158,14 @@ header {
 
     #brands h2 {
         display: inline-block;
-        color: #fff;
+        color: #ffffff;
         padding: 10px 20px 0 20px;
     }
 
 /*Index Boxes Section*/
 #boxes {
     text-align: center;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
     #boxes #secondbox {
@@ -158,24 +181,85 @@ header {
         border-color: #ddb48d;
     }
 
-@media(max-width:1240px) {
+/*@media(max-width:1240px) {
     #boxes .box {
         width: 20%;
     }
-}
-
-@media(max-width:997px) {
-    #boxes .box {
-        float: none;
-        width: auto;
-    }
-
-    #boxes #secondbox {
-        margin: 3% 0 3% 0;
-    }
-}
+}*/
 
 /*Index Shop Section*/
 #shop {
     text-align: center;
 }
+
+/*Media Query*/
+
+@media screen and (max-width:1044px) {
+    .container {
+        width: 100%;
+    }
+
+    .left-col {
+        width: 60%;
+    }
+
+    .right-col {
+        width: 40%;
+    }
+
+    #logo {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .container {
+        width: 90%
+    }
+
+    #logo {
+        margin-left: 0;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    ul {
+        display: none;
+    }
+
+        ul li {
+            width: 100%;
+            text-align: center;
+        }
+}
+
+@media screen and (max-width:640px) {
+    #boxes .box {
+        float: none;
+        width: auto;
+    }
+
+    .container {
+        width: 80%
+    }
+
+    #boxes #secondbox {
+        margin: 3% 0 3% 0;
+    }
+
+    .left-col {
+        width: 100%;
+    }
+
+    .right-col {
+        width: 0;
+    }
+
+    #parallax {
+        background: none;
+    }
+}
+/*320*/
+

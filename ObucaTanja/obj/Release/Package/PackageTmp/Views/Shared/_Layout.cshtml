@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obuća Tanja - @ViewBag.Title</title>
+    @Styles.Render("~/Style/css")  
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head>
+<body>  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".menu").click(function () {
+                $("ul").toggleClass("showing");
+            })
+
+            $(".menu").on("click",function () {
+                $("ul").toggleClass("showing");
+                $(".menu").toggleClass("menu-open");
+            });
+
+        })
+    </script>
+
+    <header>
+        <div class="container">
+            <div id="logo">
+                <img src="@Url.Content("~/Content/images/logo.png")" />
+            </div>
+            <nav>
+                <div class="toggle">
+                    <div class="menu"><i class="fas fa-bars" aria-hidden="true"></i></div>
+                </div>
+                <ul>
+                    <li class="active">@Html.ActionLink("Početna", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Prodavnica", "Shop", "Home")</li>
+                    <li>@Html.ActionLink("Muškarci", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Žene", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Korpa", "CheckOut", "Home")</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div class="container">
+            <p>&copy;Zeljko Maksimovic 2018</p>
+        </div>
+    </footer>
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
