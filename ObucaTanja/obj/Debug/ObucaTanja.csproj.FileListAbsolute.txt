@@ -82,3 +82,7 @@ E:\Git Repository\obuca-tanja\ObucaTanja\obj\Debug\ObucaTanja.csprojResolveAssem
 E:\Git Repository\obuca-tanja\ObucaTanja\obj\Debug\ObucaTanja.csproj.CoreCompileInputs.cache
 E:\Git Repository\obuca-tanja\ObucaTanja\obj\Debug\ObucaTanja.dll
 E:\Git Repository\obuca-tanja\ObucaTanja\obj\Debug\ObucaTanja.pdb
+E:\Git Repository\obuca-tanja\ObucaTanja\bin\EntityFramework.dll
+E:\Git Repository\obuca-tanja\ObucaTanja\bin\EntityFramework.SqlServer.dll
+E:\Git Repository\obuca-tanja\ObucaTanja\bin\EntityFramework.xml
+E:\Git Repository\obuca-tanja\ObucaTanja\bin\EntityFramework.SqlServer.xml

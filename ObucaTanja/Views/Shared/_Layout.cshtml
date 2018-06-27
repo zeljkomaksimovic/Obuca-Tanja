@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obuća Tanja - @ViewBag.Title</title>
+    <title>@ViewBag.Title | Obuća Tanja</title>
     @Styles.Render("~/Style/css")  
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+    <link rel="icon" href="@Url.Content("~/Content/favicon.ico")"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 </head>
 <body>  
@@ -29,7 +30,7 @@
     <header>
         <div class="container">
             <div id="logo">
-                <img src="@Url.Content("~/Content/images/logo.png")" />
+                <img src="@Url.Content("~/Content/images/index/logo.png")" />
             </div>
             <nav>
                 <div class="toggle">
@@ -51,7 +52,31 @@
 
     <footer>
         <div class="container">
-            <p>&copy;Zeljko Maksimovic 2018</p>
+                <div class="column-4 footer-col">
+                    <h2>Proizvodi</h2>
+                    @Html.ActionLink("Muške cipele", "Index", "Home")
+                    @Html.ActionLink("Ženske cipele", "Index", "Home")
+                </div>
+                <div class="column-4 footer-col">
+                    <h2>O nama</h2>
+                    @Html.ActionLink("Naša firma", "Index", "Home")
+                    @Html.ActionLink("Saradnja", "Index", "Home")
+                    @Html.ActionLink("Katalog", "Index", "Home")
+                </div>
+                <div class="column-4 footer-col">
+                    <h2>Kontakt</h2>
+                    <p>ulica 28. Novembra</p>
+                    <p>36300 Novi Pazar</p>
+                    <p>Tel: 020/316-217</p>
+                </div>
+                <div class="column-4 footer-col">
+                    <h2>Mreže</h2>
+                    @Html.ActionLink("Insagram", "Index", "Home")
+                    @Html.ActionLink("facebook", "Index", "Home")
+                </div>
+            <div id="footer-copy">
+                <span>&copy; Željko Maksimović 2018</span>
+            </div>       
         </div>
     </footer>
     @*@Scripts.Render("~/bundles/bootstrap")*@

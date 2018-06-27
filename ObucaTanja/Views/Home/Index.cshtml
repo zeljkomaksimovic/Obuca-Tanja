@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<ObucaTanja.Models.Img>
+
+@{
     ViewBag.Title = "Početna";
 }
 <div id="parallax">
@@ -18,32 +20,40 @@
 </section>
 
 <section id="brands">
-    <div class="container">        
-        <h2>Tref</h2>
-        <h2>Stefano</h2>
-        <h2>Opposite</h2>
-        <h2>Replay</h2>
-        <h2>Bata</h2>
-        <h2>Tommy</h2>
+    <div class="container">   
+        <img src="@Url.Content("~/Content/images/index/stefano-logo.png")" />
+        <img src="@Url.Content("~/Content/images/index/tref-logo.png")"/>
+        <img src="@Url.Content("~/Content/images/index/pavle-logo.png")" />
+        <img src="@Url.Content("~/Content/images/index/bambino-logo.png")" />
+        <img src="@Url.Content("~/Content/images/index/enex-logo.png")" />
     </div>
 </section>
 
 <section id="boxes">
     <div class="container">
         <div class="sectiontop">
-            <h1>Nasa usluga</h1>
+            <h2>Nasa usluga</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="box" id="firstbox">
-            <h3>HTML5 Markup</h3>
+            <div id="box-icon">
+                <i class="far fa-check-square fa-3x"></i>
+            </div>
+            <h2>Kvalitet</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae neque nec ante vehicula pellentesque sed auctor nisi. Vivamus lobortis enim tellus</p>
         </div>
         <div class="box" id="secondbox">
-            <h3>CSS</h3>
+            <div id="box-icon">
+                <i class="far fa-money-bill-alt fa-3x"></i>
+            </div>
+            <h2>Cena</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae neque nec ante vehicula pellentesque sed auctor nisi. Vivamus lobortis enim tellus</p>
         </div>
         <div class="box" id="thirdbox">
-            <h3>Responsive</h3>
+            <div id="box-icon">
+                <i class="far fa-building fa-3x"></i>
+            </div>
+            <h2>Tradicija</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae neque nec ante vehicula pellentesque sed auctor nisi. Vivamus lobortis enim tellus</p>
         </div>
     </div>
@@ -55,5 +65,46 @@
             <h1>Prodavnica</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
+        <div id="shop-items">
+
+                @foreach (var item in Model)
+                {
+                    <div class="column-3 shop-col">
+                        <div class="image-wrap">
+                            <img class="shop-image" src="@Url.Content("~/Content/images/items/modeli.jpg")" />
+                            <div class="image-description">
+                                <div class="shop-text">
+                                    <h4>Mens infantri brown leather</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae neque nec ante vehicula pellentesque sed auctor nisi.</p>
+                                    <button class="button">Dodaj u korpu</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="under-image">
+                            <h3>Mens infantri brown leather</h3>
+                            <p>8990 RSD</p>                            
+                        </div>
+                    </div>
+                }
+                
+                @*<div class="column-3 shop-col">
+                    <img src="@Url.Content("~/Content/images/items/modeli.jpg")" />
+                </div>
+                <div class="column-3 shop-col">
+                    <img src="@Url.Content("~/Content/images/items/modeli.jpg")" />
+                </div>
+            </div>    
+            <div class="row">
+                <div class="column-3 shop-col">
+                    <img src="@Url.Content("~/Content/images/items/modeli.jpg")" />
+                </div>
+                <div class="column-3 shop-col">
+                    <img src="@Url.Content("~/Content/images/items/modeli.jpg")" />
+                </div>
+                <div class="column-3 shop-col">
+                    <img src="@Url.Content("~/Content/images/items/modeli.jpg")" />
+                </div>
+            </div>*@  
+
     </div>
 </section>
